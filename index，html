@@ -1,0 +1,71 @@
+ 
+  Hello world 
+  工程创建成功！     
+   
+  秘密表白 - 密码保护 
+  
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+.container {
+    width: 80%;
+    max-width: 500px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+input[type="password"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #45a049;
+}
+.hidden {
+    display: none;
+}
+.message {
+    margin-top: 20px;
+    text-align: center;
+}
+ 
+    
+   
+   请输入密码 
+    
+   确认 
+    
+    过去了不知道多少天了还是会想到之前的点点滴滴我没有勇气再回头面对你不过我相信我们的缘分未尽还会见面吧小妍 
+    这是一段秘密的表白内容，只有输入正确密码的人才能看到哦~ 
+    
+   
+  
+function checkPassword() {
+    var password = document.getElementById('passwordInput').value;
+    var correctPassword = '727114'; // 这里设置你的密码
+    if (password === correctPassword) {
+        document.getElementById('message').classList.remove('hidden');
+        document.getElementById('confession').textContent = '在王庄中学能遇见你我很开心。';
+    } else {
+        webtools-static-lert('密码错误，请重新输入。');
+    }
+}
